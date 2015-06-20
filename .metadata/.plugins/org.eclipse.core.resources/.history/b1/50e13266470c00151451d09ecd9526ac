@@ -1,0 +1,18 @@
+package br.com.senac.pi.boaviagem;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class ViagemActivity extends Activity {
+	
+	private int dia, mes, ano;
+	private Button dataChegada, dataSaida; 
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_novaviagem);
+	}
+
+}

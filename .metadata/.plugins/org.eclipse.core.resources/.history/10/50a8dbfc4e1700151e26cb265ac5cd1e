@@ -1,0 +1,49 @@
+package br.com.pi.senac.mastercontas;
+
+import br.com.pi.databasehelper.DatabaseHelper;
+import android.app.Activity;
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class DevedorActivity extends Activity {
+	private DatabaseHelper helper;
+	private EditText editNome , editeMail, editTelefone;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_devedor);
+		
+		editNome = (EditText) findViewById(R.id.nomeDevedor);
+		editeMail = (EditText) findViewById(R.id.email);
+		editTelefone = (EditText) findViewById(R.id.telefone);
+		
+		helper = new DatabaseHelper(this);
+	}
+	
+	public void cadastrarDevedor(View view){
+		SQLiteDatabase db = helper.getWritableDatabase();
+		
+		ContentValues values = new ContentValues();
+		values.put("nome", editNome.getText().toString());
+		values.put("email", editeMail.getText().toString());
+		values.put("email", editTelefone.getText().toString());
+		
+		long resultado = db.insert("devedor", null, values);
+		
+		if(resultado != -1){
+			Toast.makeText(this, R.string.msg_sucesso, Toast.LENGTH_LONG).show();	
+		}
+		
+	}
+	
+
+
+}

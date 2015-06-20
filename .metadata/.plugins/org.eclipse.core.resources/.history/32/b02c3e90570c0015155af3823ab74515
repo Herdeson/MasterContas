@@ -1,0 +1,14 @@
+package br.com.senac.pi.boaviagem;
+
+import android.app.ListActivity;
+import android.os.Bundle;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class ViagemListActivity extends ListActivity implements OnItemClickListener {
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState){
+		
+	}
+
+}

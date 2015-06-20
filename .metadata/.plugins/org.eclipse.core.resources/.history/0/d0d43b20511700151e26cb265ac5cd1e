@@ -1,0 +1,36 @@
+package br.com.pi.databasehelper;
+
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
+public class DatabaseHelper extends SQLiteOpenHelper {
+	
+	private static final String DB_NAME="mastercontas.db";
+	private static final int VERSION_DB = 1;
+
+	public DatabaseHelper(Context context) {
+		super(context, DB_NAME, null, VERSION_DB);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void onCreate(SQLiteDatabase db){
+		//Criar tabela devedor
+		//LINHA PARA EXECUTAR SQL
+		db.execSQL("CREATE TABLE devedor IF NOT EXISTS (" 
+					+"_ID integer primarykey autoincrement,"
+					+"nome varchar(100) not null,"
+					+"telefone varchar(14) not null,"
+					+"email varchar(100) not null);");
+		
+	}
+	
+	@Override
+	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVerion){
+		
+	}
+	
+
+}

@@ -1,0 +1,31 @@
+package br.com.senac.pi.boaviagem;
+
+import java.util.Calendar;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+
+public class ViagemActivity extends Activity {
+	
+	private int dia, mes, ano;
+	private Button dataChegada, dataSaida; 
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_novaviagem);
+		
+		Calendar calendar = Calendar.getInstance();
+		ano = calendar.get(Calendar.YEAR);
+		mes = calendar.get(Calendar.MONTH);
+		dia = calendar.get(Calendar.DAY_OF_MONTH);
+		
+		dataChegada = (Button) findViewById(R.id.dataChegada);
+		dataChegada.setText(dia+"/"+(mes+1)+"/"+ano);
+		
+		dataSaida = (Button) findViewById(R.id.dataSaida);
+		dataSaida = setText(dia+"/"+(mes+1)+"/"+ano);
+	}
+
+}

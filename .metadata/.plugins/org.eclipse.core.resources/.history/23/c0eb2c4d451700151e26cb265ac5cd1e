@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MasterContas</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu">Menu Principal</string>
+    <string name="cad_Devedor">Cadastrar Devedor</string>
+    <string name="cad_Divida">Cadastrar Divida</string>
+    <string name="list_Devedor">Listar Devedor</string>
+    <string name="sair">Sair</string>
+    <string name="nome_Deve">Nome</string>
+    <string name="email">Email</string>
+    <string name="Telefone">Telefone</string>
+    <string name="title_activity_devedor">Cadastro de Devedor</string>
+
+</resources>
