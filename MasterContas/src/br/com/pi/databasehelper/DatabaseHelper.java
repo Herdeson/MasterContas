@@ -32,5 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 		
 	}
 	
+	public static class Devedores{
+		public static final String TABELA = "devedor";
+		public static final String ID= "_id";
+		public static final String NOME= "nome";
+		public static final String TELEFONE= "telefone";
+		public static final String EMAIL= "email";
+		
+		public static final String[] COLUNAS = new String[]{ ID , NOME, TELEFONE, EMAIL };
+	}
 
 }

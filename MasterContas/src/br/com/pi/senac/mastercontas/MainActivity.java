@@ -20,6 +20,9 @@ public class MainActivity extends Activity {
 		case R.id.cadDevedor:
 			startActivity(new Intent(this, DevedorActivity.class));
 			break;
+		case R.id.listDevedores:
+			startActivity(new Intent(this, ListaDevedoresActivity.class));
+			break;
 
 		default:
 			break;

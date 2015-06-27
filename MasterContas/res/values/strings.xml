@@ -14,8 +14,8 @@
     <string name="Telefone">Telefone</string>
     <string name="title_activity_devedor">Cadastro de Devedor</string>
     <string name="salvar">Salvar</string>
-    
     <string name="msg_sucesso">Cadastro realizado com sucesso</string>
     <string name="msg_error">Não foi possível realizar cadastro</string>
+    <string name="title_activity_lista_devedores">Lista Devedores</string>
 
 </resources>

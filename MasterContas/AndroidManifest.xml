@@ -26,6 +26,10 @@
             android:name=".DevedorActivity"
             android:label="@string/title_activity_devedor" >
         </activity>
+        <activity
+            android:name=".ListaDevedoresActivity"
+            android:label="@string/title_activity_lista_devedores" >
+        </activity>
     </application>
 
 </manifest>
