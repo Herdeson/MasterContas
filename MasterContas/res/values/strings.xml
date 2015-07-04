@@ -17,5 +17,14 @@
     <string name="msg_sucesso">Cadastro realizado com sucesso</string>
     <string name="msg_error">Não foi possível realizar cadastro</string>
     <string name="title_activity_lista_devedores">Lista Devedores</string>
+    
+    <string name="novo_devedor">Novo Devedor</string>
+    <string name="editar_devedor">Editar Devedor</string>
+    <string name="remover_devedor">Remover Devedor</string>
+    <string name="acoes_devedor">Ações Devedor</string>
+    <string name="configma_exclusao_devedor">Tem certeza que deseja excluir este registro?</string>
+    <string name="sim_confirmacao">Confirmar Exclusão</string>
+    <string name="nao_confirmacao">Negar Confirmação</string>
+    
 
 </resources>

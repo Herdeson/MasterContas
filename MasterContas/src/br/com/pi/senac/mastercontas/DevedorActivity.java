@@ -1,8 +1,11 @@
 package br.com.pi.senac.mastercontas;
 
 import br.com.pi.databasehelper.DatabaseHelper;
+import br.senac.pi.dao.DevedorDao;
+import br.senac.pi.model.Devedor;
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,6 +18,10 @@ import android.widget.Toast;
 public class DevedorActivity extends Activity {
 	private DatabaseHelper helper;
 	private EditText editNome , editeMail, editTelefone;
+	
+	//Refatorando
+	Devedor devedor = new Devedor();
+	DevedorDao dao = new DevedorDao(this);
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +36,16 @@ public class DevedorActivity extends Activity {
 	}
 	
 	public void cadastrarDevedor(View view){
+		
+		devedor.setNome(editNome.getText().toString());
+		devedor.setEmail(editeMail.getText().toString());
+		devedor.setTelefone(editTelefone.getText().toString());
+		
+		dao.inserir(devedor);
+		
+		startActivity(new Intent(this, ListaDevedoresActivity.class));
+		
+		/*
 		SQLiteDatabase db = helper.getWritableDatabase();
 		
 		ContentValues values = new ContentValues();
@@ -44,7 +61,7 @@ public class DevedorActivity extends Activity {
 		} else {
 			Toast.makeText(this, R.string.msg_error, Toast.LENGTH_LONG).show();
 		}
-		
+		*/
 	}
 	
 	@Override
