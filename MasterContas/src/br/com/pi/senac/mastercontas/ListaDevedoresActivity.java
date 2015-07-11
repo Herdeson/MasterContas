@@ -113,6 +113,8 @@ public class ListaDevedoresActivity extends ListActivity implements OnItemClickL
 			break;
 		case DialogInterface.BUTTON_POSITIVE:
 			devedores.remove(devedorSelecionado);
+			getListView().invalidateViews();
+			this.dao.deletar(devedorSelecionado);
 			break;
 		case DialogInterface.BUTTON_NEGATIVE:
 			alertConfirma.dismiss();
